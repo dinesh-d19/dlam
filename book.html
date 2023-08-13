@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Reservation</title>
+<link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <h1>Car Reservation</h1>
+    <p>Experience the Thrill – Test Drive It Now and Book Your Dream Car Today!</p>
+  </div>
+  <div class="video-container">
+   <video controls width="100%" height="auto" autoplay muted controls loop>
+     <source src="ad.mp4" type="video/mp4">
+   </video>
+ </div>
+
+
+  <div class="container">
+    <img class="car-image" src="logo.png" alt="Car Image">
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+             <label for="car-type">Car Models</label>
+             <div class="car-type-grid">
+               <div class="car-model" onclick="selectCarModel('Huracan')">
+                 <img src="huracan.jpg" alt="huracan">
+                 <div class="car-model-content">
+                   <div class="car-model-name">Huracan</div>
+                   <div class="car-model-price">₹ 3.73 Cr</div>
+                 </div>
+               </div>
+               <div class="car-model" onclick="selectCarModel('Urus')">
+                 <img src="urus.jpg" alt="Urus">
+                 <div class="car-model-content">
+                   <div class="car-model-name">Urus</div>
+                   <div class="car-model-price">₹ 4.18 Cr</div>
+                 </div>
+               </div>
+               <div class="car-model" onclick="selectCarModel('Revuelto')">
+                 <img src="revuelto.jpg" alt="Revuelto">
+                 <div class="car-model-content">
+                   <div class="car-model-name">Revuelto</div>
+                   <div class="car-model-price">₹ 10 Cr</div>
+                 </div>
+               </div>
+               <div class="car-model" onclick="selectCarModel('Veneno')">
+                 <img src="veneno.jpg" alt="Veneno">
+                 <div class="car-model-content">
+                   <div class="car-model-name">Veneno</div>
+                   <div class="car-model-price">₹ 3.21 Cr</div>
+                 </div>
+               </div>
+               <div class="car-model" onclick="selectCarModel('Aventador')">
+                 <img src="aventador.jpg" alt="Aventador">
+                 <div class="car-model-content">
+                   <div class="car-model-name">Aventador</div>
+                   <div class="car-model-price">₹ 6.25 Cr</div>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+      <div class="form-group">
+        <label for="selected-car">Selected Model</label>
+        <input type="text" id="selected-car" name="selected-car" readonly>
+      </div>
+
+      <button type="submit" class="reserve-btn"><a href="reserve.html">Reserve Now</a></button>
+    </form>
+      </div>
+
+  <script>
+    function selectCarModel(carType) {
+      document.getElementById('selected-car').value = carType;
+    }
+  </script>
+</body>
+</html>
